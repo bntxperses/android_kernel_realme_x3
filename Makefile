@@ -467,6 +467,11 @@ LDFLAGS :=
 GCC_PLUGINS_CFLAGS :=
 CLANG_FLAGS :=
 
+#ifdef OPLUS_FEATURE_BUILD
+#Sunliang@TECH.SysTech.Build.BaseConfig, 2020/03/18, oplus customzation for flags or other variabls
+-include OplusKernelEnvConfig.mk
+#endif // OPLUS_FEATURE_BUILD
+
 export ARCH SRCARCH CONFIG_SHELL HOSTCC HOSTCFLAGS CROSS_COMPILE LD CC
 export CPP AR NM STRIP OBJCOPY OBJDUMP READELF HOSTLDFLAGS HOST_LOADLIBES
 
