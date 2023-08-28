@@ -162,7 +162,7 @@ static const struct file_operations panel_ops =
 	.write              = panel_write,
 };
 
-static int __init oppo_display_panel_init()
+static int __init oppo_display_panel_init(void)
 {
 	int rc = 0;
 
@@ -204,7 +204,7 @@ err_class_create:
 	return rc;
 }
 
-void __exit oppo_display_panel_exit()
+void __exit oppo_display_panel_exit(void)
 {
 	pr_err("%s\n", __func__);
 
